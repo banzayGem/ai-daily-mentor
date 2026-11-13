@@ -2,12 +2,13 @@ name: Daily AI Reminder
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '47 5 * * *'
   workflow_dispatch:
 
 jobs:
   send-reminder:
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     steps:
       - name: Скачиваем код из репозитория
         uses: actions/checkout@v4
@@ -16,6 +17,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: 'pip'
 
       - name: Ставим библиотеки
         run: pip install google-genai requests
