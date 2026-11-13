@@ -15,7 +15,7 @@ prompt = (
     "Пиши энергично, по-дружески и без воды."
 )
 
-models = ["gemini-3.5-flash", "gemini-3.7-flash", "gemini-3.5-flash-lite", "gemma-4-31b-it"]
+models = ["gemini-3.5-flash-lite", "gemini-3.5-flash", "gemini-3.7-flash", "gemma-4-31b-it"]
 text = None
 
 for model_name in models:
